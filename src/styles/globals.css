@@ -1,33 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "topo.css";
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.btnPadrao {
+  display: flex;
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.campoForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.campoForm label {
+  font-size: larger;
+}
+.campoForm input {
+  border: 1px solid #888;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.myContainer {
+  display: flex;
+  width: 100%;
+}
+
+.myBox {
+  text-wrap: nowrap;
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #3498db;
+  margin-right: 0px; /* Espaçamento horizontal entre as divs */
+  transition: background-color 0.3s; /* Adiciona uma transição suave */
+}
+
+.myBox:hover {
+  background-color: #e74c3c; /* Cor diferente ao passar o mouse */
 }
